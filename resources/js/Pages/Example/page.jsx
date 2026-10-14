@@ -94,6 +94,21 @@ export default function CampusHelpdeskSPA() {
         }
     };
 
+    //asynchronous function to handle deleting a product
+        const handleDeleteProduct = async (id) => {
+        try {
+            const response = await fetch(`/api/tutoring-requests/${id}`, {
+                method: 'DELETE'
+            });
+            if (!response.ok) {
+                throw new Error('Failed to delete ticket');
+            }
+            fetchRequests();
+        } catch (error) {
+            console.error('Error deleting ticket:', error);
+        }
+    };
+
     return (
         <div className="min-h-screen bg-gray-50 text-gray-900 font-sans scroll-smooth">
             <Head title="Campus IT Helpdesk & Peer Tutoring" />
@@ -111,6 +126,7 @@ export default function CampusHelpdeskSPA() {
                     <ContentSection 
                         requests={requests} 
                         handleToggleStatus={handleToggleStatus} 
+                        handleDeleteProduct={handleDeleteProduct} 
                     />
                 </div>
             </section>

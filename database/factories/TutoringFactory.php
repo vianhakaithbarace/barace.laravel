@@ -18,7 +18,11 @@ class TutoringFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'student_name' => $this->faker->name(),
+            'station_number' => 'Station ' . $this->faker->numberBetween(1, 20),
+            'topic' => $this->faker->randomElement(['HTML/CSS', 'JavaScript/React', 'PHP/Laravel', 'Git/CLI']),
+            'issue_summary' => $this->faker->sentence(),
+            'status' => $this->faker->randomElement(['Pending', 'Resolved']),
         ];
     }
 }

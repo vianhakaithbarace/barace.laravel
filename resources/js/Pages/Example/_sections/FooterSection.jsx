@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function FooterSection() {
     return (
-        <footer className="bg-gray-900 text-gray-400 py-12 mt-12">
+        <footer className="bg-gray-900 text-gray-400 py-8 mt-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
+                <div className='ml-4'>
                     <h4 className="text-white font-bold mb-4">Lab Tutoring Schedule</h4>
                     <ul className="space-y-2 text-sm">
                         <li>Mon-Wed: 9:00 AM - 5:00 PM</li>
@@ -18,12 +18,20 @@ export default function FooterSection() {
                         Be respectful to peer tutors and fellow students. Provide clear descriptions of your issues and attempt to solve them before submitting a ticket.
                     </p>
                 </div>
-                <div>
+                <div    className="ml-10">
                     <h4 className="text-white font-bold mb-4">Code Assist Team</h4>
-                    <p className="text-sm">
-                        Built with ❤️ by the Campus IT Department.<br/>
+                    <p className="text-sm text-sky-600">
+                        <span className='hover:text-sky-300'>Norhama Macaayao</span><br></br>
+                        <span className='hover:text-sky-300'>Lyka Murillo</span><br></br>
+                        <span className='hover:text-sky-300'>Vianha Kaith Barace</span><br></br>
+                        <span className='hover:text-sky-300'>Sindy Frenzel Gel Abulan</span>
+                        <br/>
                         <a href="#" className="text-blue-400 hover:text-blue-300 mt-2 inline-block">Report an issue</a>
                     </p>
+
+                    <div>
+                        <p className="mt-2">&copy; BSIT 1-D</p>
+                    </div>
                 </div>
             </div>
         </footer>

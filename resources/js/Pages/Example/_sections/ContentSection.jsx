@@ -1,6 +1,8 @@
 import React, { useState, useMemo } from 'react';
 
-export default function ContentSection({ requests, handleToggleStatus }) {
+
+
+export default function ContentSection({ requests, handleToggleStatus, handleDeleteProduct }) {
     const [search, setSearch] = useState('');
     const [statusFilter, setStatusFilter] = useState('All');
     const [topicFilter, setTopicFilter] = useState('All');
@@ -63,19 +65,21 @@ export default function ContentSection({ requests, handleToggleStatus }) {
                 <div className="overflow-x-auto overflow-y-auto max-h-[55vh] custom-scrollbar flex-grow bg-white">
                     <table className="min-w-full divide-y divide-gray-100">
                         <thead className="bg-gray-50 sticky top-0 z-10">
-                            <tr>
+                            <tr className="bg-indigo-900">
                                 <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-widest bg-gray-50/90 backdrop-blur">Student Name</th>
                                 <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-widest bg-gray-50/90 backdrop-blur">Station</th>
                                 <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-widest bg-gray-50/90 backdrop-blur">Topic</th>
                                 <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-widest bg-gray-50/90 backdrop-blur">Issue Summary</th>
                                 <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-widest bg-gray-50/90 backdrop-blur">Status</th>
                                 <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-widest bg-gray-50/90 backdrop-blur">Time</th>
+                                <th scope="col" className="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-widest bg-gray-50/90 backdrop-blur">Delete</th>
                             </tr>
+
                         </thead>
                         <tbody className="bg-white divide-y divide-gray-100">
                             {filteredRequests.length === 0 ? (
                                 <tr>
-                                    <td colSpan="6" className="px-6 py-16 text-center text-gray-400 font-medium">
+                                    <td colSpan="7" className="px-6 py-16 text-center text-gray-400 font-medium">
                                         No tickets found matching your filters.
                                     </td>
                                 </tr>
@@ -110,6 +114,11 @@ export default function ContentSection({ requests, handleToggleStatus }) {
                                         </td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-400 font-medium">
                                             {new Date(request.created_at).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-400 font-medium">
+                                            <button className=" text-red-500 px-2 py-1" onClick={() => handleDeleteProduct(request.id)}>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash preview-icon"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                                            </button>
                                         </td>
                                     </tr>
                                 ))

@@ -31,4 +31,13 @@ class TutoringController extends Controller
 
         return response()->json($tutoringRequest);
     }
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(Tutoring $tutoringRequest)
+    {
+        $tutoringRequest->delete();
+
+        return response()->json(null, 204);
+    }
 }

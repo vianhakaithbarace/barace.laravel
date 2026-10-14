@@ -62,7 +62,7 @@ function ArrowIcon({ diagonal = false, className = '' }) {
 export default function Welcome({ auth }) {
     return (
         <>
-            <Head title="Vianha Kate Barace — Creative Portfolio" />
+            <Head title="Vianha Kaith Barace — Creative Portfolio" />
             <div className="min-h-screen bg-[#f8f7f4] text-[#20211f] selection:bg-[#e8a087] selection:text-[#20211f]">
                 <header className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-5 sm:px-10 lg:px-16">
                     <a
@@ -125,7 +125,7 @@ export default function Welcome({ auth }) {
                                 </p>
                             </div>
                             <h1 className="max-w-3xl text-[clamp(3.5rem,8vw,7.5rem)] font-medium leading-[0.91] tracking-[-0.075em]">
-                                Vianha Kate
+                                Vianha Kaith
                                 <span className="block text-[#df8065]">Barace<span className="text-[#20211f]">.</span></span>
                             </h1>
                             <div className="mt-8 max-w-xl sm:mt-10">
@@ -174,8 +174,8 @@ export default function Welcome({ auth }) {
                             </div>
                             <div className="relative overflow-hidden rounded-[48%_48%_8px_8px] bg-[#e9e4dc]">
                                 <img
-                                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1100&q=90"
-                                    alt="Portrait of Vianha Kate Barace"
+                                    src="https://scontent.fcgy2-4.fna.fbcdn.net/v/t39.30808-6/790626356_1743012166747640_149058716078402945_n.jpg?stp=dst-jpg_tt6&cstp=mx1512x2016&ctp=s1512x2016&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeG3-51-gGsNl517EJLVea-SAqR_ktEcCa4CpH-S0RwJrk5zCTi6x5HBJNZWESmKZwMDHCyzdyl9uup3NZt_c4Vn&_nc_ohc=fE5Z1WF-gsAQ7kNvwGlyl0H&_nc_oc=Adq_IoDqzDvpkaWnMn1lDxfdpvVc5nOP4YnlutRstVFPfZg4afW0WWC7tdKRJP4YXwU&_nc_zt=23&_nc_ht=scontent.fcgy2-4.fna&_nc_gid=BF0QFRxLyFxTm-vnNVJVkw&_nc_ss=7b2a8&oh=00_AQPm7N3ysNPRhHYKHPnLKYoKNLzdpmeiRqT0CAOoKnHQsQ&oe=6AD51F85"
+                                    alt="Portrait of Vianha Kaith Barace"
                                     className="aspect-[0.88] w-full object-cover object-center"
                                 />
                             </div>
@@ -294,10 +294,10 @@ export default function Welcome({ auth }) {
                                 </h2>
                             </div>
                             <a
-                                href="mailto:hello@vianhakatebarace.com"
+                                href="mailto:hello@vianhakaithbarace.com"
                                 className="group inline-flex w-fit items-center gap-5 border-b border-white/30 pb-3 text-base transition hover:border-[#e8a087] sm:text-lg"
                             >
-                                hello@vianhakatebarace.com
+                                hello@vianhakaithbarace.com
                                 <ArrowIcon
                                     className="h-5 w-5 text-[#e8a087] transition group-hover:translate-x-1"
                                 />
@@ -307,7 +307,7 @@ export default function Welcome({ auth }) {
                 </main>
 
                 <footer className="flex flex-col gap-3 bg-[#20211f] px-6 pb-7 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-16">
-                    <p>© {new Date().getFullYear()} Vianha Kate Barace. Made with care.</p>
+                    <p>© {new Date().getFullYear()} Vianha Kaith Barace. Made with care.</p>
                     <a className="transition hover:text-white" href="#home">
                         Back to top ↑
                     </a>

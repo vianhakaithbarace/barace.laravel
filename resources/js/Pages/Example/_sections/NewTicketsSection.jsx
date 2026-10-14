@@ -8,8 +8,8 @@ export default function NewTicketsSection({ requests, handleToggleStatus }) {
         <div className="flex flex-col h-full">
             <div className="flex items-center justify-between mb-6 shrink-0">
                 <h2 className="text-2xl font-bold text-gray-900">New Tickets</h2>
-                <span className="text-sm text-gray-500 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                <span className="text-sm bg-green-200 rounded-full px-3 py-2 text-green-900 font-bold flex items-center gap-2 shadow-lg border border-green-400">
+                    <span className="w-2 h-2 animate-ping inline-flex bg-green-950 opacity-80 rounded-full bg-green-500 animate-pulse"></span>
                     Live Updates
                 </span>
             </div>
@@ -21,7 +21,7 @@ export default function NewTicketsSection({ requests, handleToggleStatus }) {
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {newTickets.map(request => (
-                        <div key={request.id} className="bg-white rounded-xl shadow-sm border border-gray-200 p-5 hover:shadow-md transition-shadow relative overflow-hidden group">
+                        <div key={request.id} className="bg-white rounded-xl shadow-sm border border-gray-200 p-5 hover:shadow-lg hover:shadow-amber-700/60 shadow-yellow-900/80 relative overflow-hidden group cursor-pointer transition duration-300 transform hover:scale-100 active:scale-105">
                             <div className={`absolute top-0 left-0 w-1 h-full ${request.status === 'Pending' ? 'bg-amber-400' : 'bg-emerald-500'}`}></div>
                             <div className="flex justify-between items-start mb-3">
                                 <div>

@@ -6,7 +6,7 @@ export default function NavSection({ pendingCount }) {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                     <span className="text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-purple-600 tracking-tight">
-                        Code Assist
+                        💻 Code Assist
                     </span>
                 </div>
                 <div className="flex items-center gap-6">
@@ -21,7 +21,7 @@ export default function NavSection({ pendingCount }) {
                             Queue
                         </a>
                     </nav>
-                    <div className="flex items-center gap-2 bg-gradient-to-r from-amber-100 to-orange-100 text-amber-900 px-4 py-1.5 rounded-full font-bold text-sm shadow-sm border border-amber-200/50">
+                    <div className="flex items-center gap-2 bg-gradient-to-r from-amber-100 to-orange-100 text-amber-900 px-4 py-1.5 rounded-full font-bold text-sm shadow-lg border border-amber-200/50">
                         <span className="relative flex h-3 w-3">
                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                           <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
